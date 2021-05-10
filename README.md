@@ -1,7 +1,8 @@
 #### 20210510(월) 작업내용
-    
-    - 업로드절차 : 1.커밋(commit) 2. 푸시(push)
-    - 다운로드절차 : 풀(pull) 
+    -git config --local user.name 이름
+    -git config --local user.email 이메일
+    -업로드절차 : 1.커밋(commit) 2. 푸시(push)
+    -다운로드절차 : 풀(pull) 
     -레포지토리(저장소) 초기화 : git init
     -개발PC(html) 과 깃 저장소와 연결시킵니다.
     *포트의 역할이 트랜드로 많이 사용됩니다.
