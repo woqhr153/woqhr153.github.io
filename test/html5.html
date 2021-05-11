@@ -8,16 +8,127 @@
     <style>
         table, tr, th, td {
             border: 1px solid black;
-            font-size: 13px;
-
+            font-size: 15px;
+        }
+        /* style의 주석 ctrl+/키 조합*/
+        /* 테이블태그의 테두리 이중선 1개선으로 병합 */
+        table {
+            border-collapse: collapse;
+        }
+        header, nav, section, aside, footer{
+            border:1px dotted black;
         }
     </style>
 </head>
 <body>
+ 
+    <!-- HTML5레이아웃 구조에 사용되는 태그
+        header, nav, section, article, aside, footer -->
+    <style>
+        header, nav, section, aside, footer{
+            border:1px dotted black;
+        }
+        header > h1, footer > h1 { text-align: center;}
+    nav{display: block; height: 60px}
+    nav > ul > li {
+        float:left; margin-right:25px;
+    }
+    section {width: 79%; display: inline-block;}
+    aside {
+        height: 100%;
+        position: absolute;
+        width: 20%; display: inline-block;
+        }
+        /*내부의 컨텐츠 기준되는 외부 요소에 관계형 포지션 추가*/
+    div.contents {position: relative;}
+    
+    </style>
+    <header>
+        <h1>Header</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">menu1</a></li>
+            <li><a href="#">menu2</a></li>
+            <li><a href="#">menu3</a></li>
+        </ul>
+    </nav>
+    <div class="contents">
+        <section>
+            <h1>section</h1>
+            <article>
+                <h1>article</h1>
+            </article>
+        </section>
+        <aside>
+            <h1>aside</h1>
+        </aside>
+    </div>
+    <footer>
+        <h1>footer</h1>
+    </footer>
 
-<!-- 유튜브 영상 -->
 
-<iframe width="956" height="538" src="https://www.youtube.com/embed/fE2h3lGlOsk?list=PL8i_ndOyYn7imtoUG76knWageAh_heVGj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <!-- 테이블 태그 제어 : 셀병함
+        table, tr(table row 줄), td(table date 칸) -->
+
+    <table>
+        <tr>
+            <th>순번</th>
+            <th>책이름</th>
+            <th>가격</th>
+            <th>판매량</th>
+            <th>판매액</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>html</td>
+            <td>7,000</td>
+            <td rowspan="2">1,000</td>
+            <!-- 세로칸 병합 -->
+            <td>7,000,000</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>JS</td>
+            <td>7,000</td>
+            <!-- <td>1,000</td> -->
+            <td>7,000,000</td>
+        </tr>
+        <tr>
+            <td colspan="4">합계</td>
+            <!-- colspan 가로칸 병합 -->
+            <td>14,000,000</td>
+        </tr>
+    </table>
+
+
+
+
+<!-- html5 폼 태그 사용  엘리먼트 form 태그, input 태그-->
+<!-- 액션-데이터자료 전송(메서드 : 방법), radio(file), submit -->
+<form action="https://naver.com">
+    <input type="text" name="text" id="">
+    <input type="password" name="password" id="">
+    <input type="date" name="date" id="">
+    <input type="color" name="color" id="">
+    <input type="radio" name="radio" id="">
+    <input type="radio" name="radio" id="">
+    <!-- 라디오 버튼은 2개 이상중에 1개만 선택, name이 같음 -->
+    <input type="checkbox" name="checkbox1" id="">
+    <input type="checkbox" name="checkbox2" id="">
+    <!-- 체크박스 2개이상 선택가능, name이 틀림 -->
+    <input type="file" name="file" id="">
+    <input type="file" name="file" id="">
+    <textarea name="textarea" id="" cols="30" rows="10"></textarea>
+    <input type="button" value="버튼">
+    <input type="reset" value="입력취소">
+    <input type="submit" value="서밋">
+</form>
+
+<!-- 유튜브 영상 집어넣기  iframe-->
+
+<iframe width="100%" height="500px" src="https://www.youtube.com/embed/fE2h3lGlOsk?list=PL8i_ndOyYn7imtoUG76knWageAh_heVGj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 <!-- 컨텐츠 경로 .은 현재폴더의 상대경로, 절대 경로-->
 
@@ -58,7 +169,7 @@
 		<th>작성자</th>
 	</tr>
 </thead>
-<tbody>
+<tdody>
 	<tr>
 		<td>1</td>
 		<td>모든 국민은 법률이 정하는 바에 의하여 국...</td>
@@ -84,7 +195,7 @@
 		<td>이 헌법시행 당시에 이 헌법에 의하여 새로...</td>
 		<td>문종</td>
 	</tr>
-</tbody>
+</tdody>
 </table>
 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, nisi voluptas earum omnis porro ratione eos est iusto natus, velit sequi! Blanditiis ratione eligendi officiis sed cum autem similique quidem!</p>
     <!-- html:5콜론, ;세미콜론 -->
