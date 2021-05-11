@@ -33,14 +33,22 @@
     nav > ul > li {
         float:left; margin-right:25px;
     }
-    section {width: 79%; display: inline-block;}
+    section > article{
+        border:1px solid steelblue;
+        margin: 5px 30px;}
+    section {
+       
+        width: 79%; display: inline-block;}
     aside {
+        right:0px;
         height: 100%;
         position: absolute;
         width: 20%; display: inline-block;
         }
         /*내부의 컨텐츠 기준되는 외부 요소에 관계형 포지션 추가*/
-    div.contents {position: relative;}
+    div.contents {
+        overflow: hidden;
+        position: relative;}
     
     </style>
     <header>
@@ -57,7 +65,10 @@
         <section>
             <h1>section</h1>
             <article>
-                <h1>article</h1>
+                <h1>article1</h1>
+            </article>
+            <article>
+                <h1>article2</h1>
             </article>
         </section>
         <aside>
