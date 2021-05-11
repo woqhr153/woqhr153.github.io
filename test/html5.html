@@ -5,17 +5,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML5 실습</title>
+    <style>
+        table, tr, th, td {
+            border: 1px solid black;
+            font-size: 13px;
+
+        }
+    </style>
 </head>
 <body>
+
+<!-- 유튜브 영상 -->
+
+<iframe width="956" height="538" src="https://www.youtube.com/embed/fE2h3lGlOsk?list=PL8i_ndOyYn7imtoUG76knWageAh_heVGj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<!-- 컨텐츠 경로 .은 현재폴더의 상대경로, 절대 경로-->
+
+<img style="width:100%;" src="./img/water.jpg" alt="엑박일떄 표시할 내용이 여기에">
+
+<img style="width:100%;" src="/test/img/water.jpg" alt="엑박일떄 표시할 내용이 여기에">
+
+    <!-- 영역지정 div = division, 가상링크 : # 생성-->
+    
+    <div style="background-color: rgb(80, 80, 87);">
+        <a href="#">네이버</a>
+        <a href="#">다음</a>
+        <a href="#">네이트</a>
+    </div>
+
+<!-- 리스트형 : ol(Ordered List 정렬된 리스트), ul(Unodered List 비정렬 리스트) -->
+<ol type="a">
+    <li>헬로 html</li>
+    <li>헬로 html</li>
+    <li>헬로 html</li>
+</ol>
+
+<ul>
+    <li>헬로 html</li>
+    <li>헬로 html</li>
+    <li>헬로 html</li>
+</ul>
+    <!-- H20, X2 아래첨자, 위첨자로 보이게 -->
+<P>H<SUB>2</SUB>0</P> 
+<P>X<sup>2</sup>=4</P>
+
+    <!-- 로렘 입숨(립숨)은 작업한 공간에 채울내용을 자동으로 생성해주는 기능 -->
+    <table class="table table-bordered">
+<thead>
+	<tr>
+		<th>번호</th>
+		<th>제목</th>
+		<th>작성자</th>
+	</tr>
+</thead>
+<tbody>
+	<tr>
+		<td>1</td>
+		<td>모든 국민은 법률이 정하는 바에 의하여 국...</td>
+		<td>장영실</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>대통령의 국법상 행위는 문서로써 하며, 이...</td>
+		<td>혜초</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>대통령은 조약을 체결·비준하고, 외교사절...</td>
+		<td>윤집</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>선거에 관한 경비는 법률이 정하는 경우를 ...</td>
+		<td>관창</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>이 헌법시행 당시에 이 헌법에 의하여 새로...</td>
+		<td>문종</td>
+	</tr>
+</tbody>
+</table>
+<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam, nisi voluptas earum omnis porro ratione eos est iusto natus, velit sequi! Blanditiis ratione eligendi officiis sed cum autem similique quidem!</p>
     <!-- html:5콜론, ;세미콜론 -->
     <!-- h헤더태크 약자 글 제목에 표시 -->
     <!-- P태그 : 문단의 약자(Paragraph) -->
     <!-- 줄바꿈이 이루어지는 영역태그 : 블럭영역 -->
     <!-- 줄바꿈이 이루어지지 않는 영역태그 : 인라인블럭영역=span -->
     <!-- 도메인(사람이 확인) == IP주소(컴퓨터시스템) -->
+    <!-- 매칭(묶어줌) = 바인딩(묶어줌) -->
     <!-- 사람색상(color) : red, blue-->
-    <!--  -->
-    <span style="color: #5601a5;">헬로 HTML1</span>
+    <!-- 컴퓨터색상(color) : #ff(red)00(green)00(blue)
+        예, #ffffff = #fff = white = 함수 rgb(255, 255, 255)
+        #16진수 : 빛의 3가지 색상(3원색) 빛은 더하면 흰색으로 변함.
+        참고, 물감은 더하면 검은색으로 변함
+    -->
+    <!-- 16진수 : 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f  -->
+    <span style="color: rgb(255, 42, 255);">헬로 HTML1</span>
     <span>헬로 HTML2</span>
     <h1>헬로 html</h1>
     <h2>헬로 html</h2>

@@ -1,4 +1,6 @@
 #### 20210511(화) 작업내용
+    - 로렘입숨 한글 URL : http://guny.kr/stuff/klorem/#/table-html
+    - 로렘입숨 영어 URL : https://loremipsum.io/generator/
     - URL경로(PATH) : /루트, test/html5.html
     - HTML5의 레이아웃 구조 제작
     - 서버(응답하는 프로그램=response) = 아파치서버, 톰캣서버
