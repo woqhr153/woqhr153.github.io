@@ -1,3 +1,11 @@
+
+    - git clone으로 프로젝트를 가져온 경우 아래 내용을 추가해줘야됨
+    - git config --list 확인에서 user.nane, user.email 없으면 추가
+    - git config user.name 영문이름
+    - git config user.email 영문메일
+    - 프로젝트를 1명이 제작하는 경우가 없기떄문에 소스수정한 사람 확인용    정보임
+
+
 #### 20210511(화) 작업내용
     - 로렘입숨 한글 URL : http://guny.kr/stuff/klorem/#/table-html
     - 로렘입숨 영어 URL : https://loremipsum.io/generator/
