@@ -1,4 +1,4 @@
-
+#### 20210512(수) 작업내용
     - git clone으로 프로젝트를 가져온 경우 아래 내용을 추가해줘야됨
     - git config --list 확인에서 user.nane, user.email 없으면 추가
     - git config user.name 영문이름

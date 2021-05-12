@@ -18,9 +18,72 @@
         가상선택자 : ::after ::before 
         가상요소(Element-가상태그) : :hover      예)a:hover
         */
+        h1 {
+            background-color: slateblue;
+        }
+        div * {
+           color: red;
+        }
+        .box-one, .box-tow {
+            background-color: darkcyan;
+        }
+        #box-four, #box-five {
+            background-color: chartreuse;
+        }
+        .box-one p::after {content: '  add'}
+        .box-one p::before {content: 'add '} 
+        a:hover {color: rgb(76, 33, 175)}
+        /* 크기단위  font크기, img크기, 유튜브영상크기 
+            단위 종류 : px, em(배수), rem(root기반배수) */
+        .box-one {
+            font-size: 8px;
+            /* font-size: 1.5em;  웹 브라우저 기본 폰트크기는 16px = 1em */
+            /* font-size: 1.5rem; */
+             }
+        .box-one p { 
+            /* 웹브라우저 기본폰트인 16px의 1.5배가 아니고, 부모요소의 1.5배 (8px의 1.5배) */
+            font-size: 1.5em;
+            font-size: 1.5rem;
+            /* 위에서부터 해석하는 방식 인터프러터형=자바스크립트 인터프리터형 언어 */
+            }
+        .box-one {
+            width: 200px;
+            height: 200px;
+            background-color: goldenrod;
+            padding: 20px; /* 인쪽여백 */
+            margin:40px 10PX 30px 90px; /* 바깥쪽여백*/
+            /* 바깥여백 : 2가지방향 상화 /좌우
+                        4가지 방향 12시 시작으로 시계방향으로 이동 */
+            margin : 50px 30px;
+            border: 10px solid red;
+            box-sizing: border-box;
+            /* 가로 가운데 정렬하는 방법 */
+            margin: 0px;
+            margin: 0px auto;
+            margin: 0px;
+            position: fixed;
+            /* 자리가 다른 태그와 관련없는 위치가짐 absolute 절대위치, fixed 고정위치 */
+            margin-top: 20px;
+            margin-left: 20px;
+        }
+        .box-tow {
+
+            width: 200px;
+            height: 200px;
+            background-color: darkgreen;
+            box-sizing: border-box; /* 필수*/
+        }
 </style>
 </head>
 <body>
+    <h1>헬로 css</h1>
+    <div class="box-one"><p> <a href="#">상단이동</a> </p></div>
+    <div class="box-tow"> <a href="#">tow tow tow </a></div>
+    <div class="box-three">three</div>
+    <div id="box-four">four</div>
+    <div id="box-five">five</div>
+
+
         <!-- 
         10 크롬 확장프로그램으로 컬러 피커 사용해보기
         09 구글 폰트 사용하기: 나눔고딕체 사용
@@ -35,6 +98,9 @@
         Cascade Style Sheet 계층형 스타일 표
         01 css 적용하는 3가지 방법 확인, 내부css, 외부css, 인라인css
      -->
+
+
+     <p><span style="color:tomato">Lorem, ipsum</span> dolor sit amet consectetur adipisicing elit. Itaque incidunt harum voluptates aperiam in sapiente magni? Ipsum, labore eius. Unde adipisci iure expedita iste. Commodi dignissimos doloremque officiis, itaque accusamus quae inventore illo quibusdam omnis maiores rem est ratione minima voluptatum beatae. Aut autem debitis velit totam, laboriosam maiores natus eum, tempora consequuntur repudiandae suscipit blanditiis nobis, ducimus nulla recusandae beatae nisi. Laborum modi omnis nobis alias ratione ad voluptas ducimus, rem fugit voluptates. Tempore, sequi dolorem, architecto quae eum ut, laudantium iusto provident omnis quam modi? Eveniet consequatur, nobis debitis placeat, dolorem quidem ut voluptatum cumque, pariatur ab dolore!</p>
      <p><span style="color:tomato">Lorem, ipsum</span> dolor sit amet consectetur adipisicing elit. Itaque incidunt harum voluptates aperiam in sapiente magni? Ipsum, labore eius. Unde adipisci iure expedita iste. Commodi dignissimos doloremque officiis, itaque accusamus quae inventore illo quibusdam omnis maiores rem est ratione minima voluptatum beatae. Aut autem debitis velit totam, laboriosam maiores natus eum, tempora consequuntur repudiandae suscipit blanditiis nobis, ducimus nulla recusandae beatae nisi. Laborum modi omnis nobis alias ratione ad voluptas ducimus, rem fugit voluptates. Tempore, sequi dolorem, architecto quae eum ut, laudantium iusto provident omnis quam modi? Eveniet consequatur, nobis debitis placeat, dolorem quidem ut voluptatum cumque, pariatur ab dolore!</p>
 </body>
 </html>
