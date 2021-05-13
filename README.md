@@ -6,6 +6,10 @@
 
 
 #### 20210513(목) 작업내용
+    - 픽사베이 이미지 3개 : 로고1, 슬라이드 이미지1, Noimage 1 받고, 경로 적어 놓기
+    - 로고 : https://pixabay.com/ko/vectors/dab-%EC%83%89-%EC%8A%A4%ED%8F%BF-%EB%A1%9C%EA%B3%A0-%EC%98%88%EC%88%A0-1692452/
+    - 슬라이드 이미지 : https://pixabay.com/ko/photos/%EB%B2%8C-%EC%83%88-%EB%82%98%EB%8A%94-%EB%B2%84%EB%93%9C-%EC%95%BC%EC%83%9D-%EC%83%9D%EB%AC%BC-5477966/
+    - Noimage : https://pixabay.com/ko/vectors/%EC%82%AC%EC%A7%84-%EC%9D%B4%EB%AF%B8%EC%A7%80-%EA%B2%BD%EC%B9%98-%EC%95%84%EC%9D%B4%EC%BD%98-1103595/
     - 제이쿼리 코어 다운받기 : min버전(압축-속도UP), 일반버전(개발-속도Nomal)
     - jQuery 미처리 작업은 다음 주, 
     - 오늘부터는 모바일 메인페이지 1개 만들어서 과제물 제출 -> 스프링에서 프로그램 입히는 소스로 사용
