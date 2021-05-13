@@ -1,2 +1,53 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
+/* 모바일용 메인페이지 스타일 지정(아래) */
+/* 공통영역  */
+body {/* body a태그 적용 안됨 */
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 16px !important; /* important 중요함 : body 폰트크기는 무조건 고정 */
+    letter-spacing: -1px !important;
+    color: #444 !important;
+    word-wrap:break-word !important; /* 워드랩, 줄바꿈할 때 단어가 분리되지 않으면서 단어단위로 줄바꿈이 됨.*/
+    line-height: 1 !important; /* 단위 1이면 16px임*/
+}   
+dl, ol, ul {margin-bottom: 0 !important;}
+#container a:hover {color: #000 !important} /* : 가상선택자, :: 가상요소*/
+a:link {color: #444}
+a:hover {color: #fff}
+a:visited {color: #444}
+a {text-decoration: none;} /* 링크의 밑줄이 사라짐*/
+.clear::after {
+    content: '';
+    clear: both; /* 태그의 위치를 지정하는 float : left|right 속성을 초기화 */
+    display: block; /* float는 블럭 속성이 없어진 것을 clear시키면, 다시 block 속성 부여*/
+}
+.txt_right { /* mt 네이밍은 부트스트랩과 동일 */
+    text-align: right !important;
+}
+.mt20 {
+    margin-top: 20px !important;
+}
+.w100p { /* 너비크기 100% */
+    width: 100% !important;
+}
+/* //공통영역 */
+
+/* 헤더영역 */
+.on { /* . 클래스선택자 */
+    background-color: #32353d;
+}
+header { /* 태그선택자 */
+    height: 90px;
+    text-align: center;
+    z-index: 200; /* z-index z의 순서 : x(가로축), y(세로축), z(위쪽공간) */
+    /* z-index:0은 제일 아래 : 값이 높을수록 위쪽에 배치 */
+    /* z-index:200 이유 : 슬라이디 이미지 겹칠 때 메뉴가 다른 태그에 가려지는 것을 방지 */
+    background: rgba(0,0,0,0.5); /* alpha 약자 : 투명도 1:100%, 0.5:50% */
+    position: absolute; /* left, top 값이 제대로 작동 */
+    left:0; top: 0;
+    width: 100%;
+}
+.box_inner {
+    width: 100%; margin: 0 auto;
+}
+/* //헤더영역  */
