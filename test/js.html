@@ -25,7 +25,7 @@
         //$*('id선택자').click(콜백함수(){구현내용});
         $(document).ready(function(){
             //html 문서를 다 읽어 들인 후에 {블럭}내용이 실행됨
-            $('checkValue').click(function () {
+            $('#checkValue').click(function () {
                 alert($('#name').val());
                 $('#one').css('background-color','red');
             });
@@ -47,7 +47,7 @@
     <input type="text", name="name", id="name", value="테스트">
     <!-- 입력값을 전송하는 버튼 -->
     <button onclick="checkValue('하이')">입력값 확인</button>
-    <button id="checkValue">제이커리 입력값 확인</button>
+    <button id="checkValue">jQuery 입력값 확인</button>
     <br>
     
     <script>
@@ -64,7 +64,7 @@
         console.log(names);
         function checkValue(params) {
             // alert(params +'버튼 클릭 되었습니다.')
-            alert(names.val() + "가 입력한 값입니다")
+            alert(names.val() + "가 입력한 값입니다");
             // document.getElementById('one').style.backgroundColor = 'red';
             $('#one').css('background-color','red');
             
