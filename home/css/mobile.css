@@ -110,7 +110,7 @@ header { /* 태그선택자 */
 	width: 100%;
 	background: #31343d;
 	margin-top: 36px;
-	display: none;
+	/* display: none; */
 }
 .closePop {
 	display: block;
@@ -284,7 +284,7 @@ li.imglist2 {
 	padding: 0 20px;
 }
 .place_list li img {
-	width: 100px; /* 가로크기 반응형으로 만드는 방법 100%표시 */
+	width: 100%px; /* 가로크기 반응형으로 만드는 방법 100%표시 */
 }
 .place_list li h3 {
 	font-weight: bold;
