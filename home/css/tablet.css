@@ -188,7 +188,7 @@
 	.bbs_line .notice_recent li a {
 		display: block;
 		padding-left: 14px;
-		background: url(../img/ico_bullet.png) no-repeat 0 50px;
+		background: url(../img/ico_bullet.png) no-repeat 0 50%;
 		overflow: hidden;
 		text-overflow: ellipsis; /* 문자열이 영역을 벗어났을 때 ...표시하는 명령어*/
 		white-space: nowrap; /* 문자를 자를 때 단어를 기준으로 하지 않겠다. */
