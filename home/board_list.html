@@ -30,6 +30,83 @@
 
 /* //모바일용 게시판 스타일 */
 
+/* 게시판리스트 영역 */
+
+.bodytext_area {
+    box-sizing: border-box;
+    padding: 0;
+}
+.minisrch_form {
+    width: 100%;
+    text-align: right;
+    margin-bottom: 20px;
+}
+.minisrch_form .tbox {
+    padding: 0 5px 0 30px;
+    width: 200px;
+    height: 35px;
+    line-height: 35px;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    background: url(./img/ico_search.png) no-repeat 10px 50%;
+    background-size: 15px;
+}
+.btn_srch {
+    display: inline-block; /* 줄바꿈 없이 자리차지하기 */
+    width: 70px;
+    text-align: center; /* left center right*/
+    height: 35px;
+    line-height: 35px;
+    vertical-align: middle; /* top middle bottom*/
+    background: #384d75;
+    color: #fff !important;
+    border: none;
+}
+.minisrch_form legend {
+    text-indent: -9999px;
+    font-size: 0px;
+}
+input::placeholder { /* IE(Internet Explore) 브라우저용 스타일 +-= 크로스 브라우징 처리 */
+    color: #999;
+}
+.bbsListTbl {
+    width: 100%;
+    border-top: 2px solid #384d75;
+}
+.bbsListTbl th:nth-child(1) {display: none;} /* a-모바일에서는 가로를 단순처리 */
+.bbsListTbl th:nth-child(2) {width: 70%;}
+.bbsListTbl th:nth-child(3) {display: none;}
+.bbsListTbl th:nth-child(4) {width: 30%;}
+.bbsListTbl th {
+    border-bottom: 1px solid #ccc;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 0;
+    box-sizing: border-box;
+    height: 45px;
+    background: #fef3fa;
+}
+.bbsListTbl td:nth-child(1) {display: none;}
+.bbsListTbl td:nth-child(3) {display: none;}
+.bbsListTbl td {
+    text-align: center;
+    line-height: 1.3;
+    border-bottom: 1px solid #ccc;
+}
+.bbsListTbl td:nth-child(2) {text-align: left;}
+.bbsListTbl th, .bbsListTbl td {
+    padding: 10px;
+    box-sizing: border-box;
+    height: 45px;
+}
+.bbsListTbl td a {
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* //게시판리스트 영역 */
 /* 테블릿용 메인페이지 스타일 지정(아래) 801px~무한대까지 재정의 */
 @media all and (min-width:801px) {
 	
