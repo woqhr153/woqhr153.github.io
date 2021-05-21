@@ -277,3 +277,80 @@ input::placeholder { /* IE(Internet Explore) 브라우저용 스타일 +-= 크�
         text-align: center;
      }
 }
+
+/* 게시판 글쓰기 폼 */
+
+.appForm {
+	margin:  20px auto;
+	text-align: left;
+}
+.appForm legend {
+	font-size: 0px;
+}
+.pilsoo_item::before { /* before 가상요소는 pilsoo_item 클래스 영역의 앞부분에 내용 */
+	content: '*';
+	display: inline-block;
+	position: absolute;
+	left: 5px;
+	width: 15px;
+	font-weight: bold;
+	font-size: 17px;
+	color: red;
+}
+.app_list {
+	padding: 10px 0;
+}
+.app_list li {
+	position: relative;
+	padding: 10px 0;
+	border-bottom: 1px solid #ccc;
+}
+.info_pilsoo {
+    position: relative;
+	font-size: 15px;
+	padding-left: 20px;
+    padding-bottom: 10px;
+	border-bottom: 2px solid #000;
+    color: red;
+}
+.app_list li .tit_lbl {
+	float: none;
+	line-height: 50px;
+	box-sizing: border-box;
+	padding-left: 20px;
+	font-weight: bold;
+	font-size: 17px;
+	letter-spacing: -2px;
+}
+.app_content {
+	float: none;
+	width: auto;
+	border: 1px solid #ccc;
+	margin-left: 1px;
+}
+.app_content input { /* 부모 영역(브라우저기본값)의 input태그의 너비값을 상속받음-초기화*/
+	border: none;
+	width: inherit;
+	box-sizing: border-box;
+	display: inline-block;
+	height: 45px;
+	padding: 0 10px;
+	line-height: normal;
+	font-size: 15px;
+}
+.appForm textarea {
+	height: 130px;
+	box-sizing: border-box;
+	padding: 10px;
+	font-size: 15px;
+	letter-spacing: -1px;
+	color: #444;
+	border: none;
+}
+.appForm textarea::placeholder {color: #999;} /* 최신브라우저 적용 */
+textarea:-ms-input-placeholder {color: #999;} /* ms사 브라우저 적용 */
+.btn_baseColor {
+	margin-top: 15px;
+}
+
+/* //게시판 글쓰기 폼 */
