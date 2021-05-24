@@ -24,13 +24,31 @@
 <script src="/home/js/main.js"></script>
 <!-- 메인슬라이드 코어 임포트 -->
 <script src="/home/js/slidemain.js"></script>
+<!-- 폰트어썸 CSS 임포트 -->
+<link rel="stylesheet" href="/admin/plugins/fontawesome-free/css/all.min.css">
+<!-- 부트스트랩CSS코어 임포트 -->
+<link rel="stylesheet" href="/admin/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+<!-- 부트스트랩JS코어 임프트 -->
+<script src="/admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE전용 CSS 임포트 -->
+<link rel="stylesheet" href="/admin/dist/css/adminlte.min.css">
 <style>
 
 
 
-/* //모바일용 게시판 스타일 */
+/* //모바일용 댓글 스타일 */
 
-
+.timeline, .card-default {
+	text-align: left;
+    margin: 0 5px;
+}
+.row {margin: 0;}
+.bs-stepper-content {
+	padding: 20px 10px;
+}
+.btn {
+	font-weight: bold;
+}
 
 /* 테블릿용 메인페이지 스타일 지정(아래) 801px~무한대까지 재정의 */
 @media all and (min-width:801px) { 
@@ -153,6 +171,89 @@ $(document).ready(function() {
 			
 		</div>
 		<!-- //메인본문영역 -->
+
+		<!-- 댓글영역 -->
+
+		<div class="row">
+			<div class="col-md-12">
+				<!-- 댓글입력 폼 -->
+
+				<div class="card-default">
+					<div class="card-header">
+					  <h3 class="card-title">댓글 쓰기</h3>
+					</div>
+					<div class="card-body p-0"> 
+					  <div class="bs-stepper linear">
+						<div class="bs-stepper-header" role="tablist">
+						  <!-- your steps here -->
+						  <div class="line"></div>
+						</div>
+						<div class="bs-stepper-content">
+						  <!-- your steps content here -->
+						  <div id="logins-part" class="content active dstepper-block" role="tabpanel" aria-labelledby="logins-part-trigger">
+							<div class="form-group">
+							  <label for="writer">작성자</label>
+							  <input type="text" class="form-control" id="writer" placeholder="작성자명을 입력해주세요">
+							</div>
+							<div class="form-group">
+							  <label for="reply_text">댓글내용</label>
+							  <input type="text" class="form-control" id="reply_text" placeholder="댓글내용을 입력해주세요">
+							</div>
+						  </div>
+						  <div id="information-part" class="content" role="tabpanel" aria-labelledby="information-part-trigger">
+							<button type="button" class="btn btn-warning" id="btn_reply_write">댓글등록</button>
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<!-- /.card-body -->
+					<div class="card-footer">
+					아래 댓글리스트 버튼을 클릭하시면 댓글 목록이 출력이됩니다.
+					</div>
+				  </div>
+
+				<!-- //댓글입력 폼 -->
+			</div>
+			<div class="col-md-12">
+			  <!-- The time line -->
+			  <div class="timeline">
+				<!-- timeline time label -->
+				<div class="time-label">
+				  <span class="bg-red">댓글리스트[<span>1</span>]</span>
+				</div>
+				<!-- /.timeline-label -->
+				<!-- timeline item -->
+				<!-- 댓글리스트를 자바스크립트의 빵틀(탬플릿)을 만듭니다.-->
+				<!-- 고전 append 함수를 사용하지 않고, handlebars 확장프로그램 임포트(아래)-->
+				<!-- 장점은 기존 퍼블리셔가 만든태그를 그대로 사용 가능-->
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/3.0.1/handlebars.js"></script>
+				<script id="template" type="text/x-handlebars-template">
+					{{#each .}}
+					<div class="div_template" data-rno="{{rno}}">
+					<i class="fas fa-envelope bg-blue"></i>
+					<div class="timeline-item">
+						<h3 class="timeline-header">{{replyer}}</h3>
+	
+						<div class="timeline-body">
+						{{reply_text}}
+						</div>
+						<div class="timeline-footer">
+						<a class="btn btn-primary btn-sm" data-toggle="modal" data-target="#modal-reply">수정</a>
+						</div>
+					</div>
+					</div>
+					{{/each}}
+				</script>
+				<!-- END timeline item -->
+				
+			
+			  </div>
+			</div>
+			<!-- /.col -->
+		  </div>
+
+		<!-- //댓글영역 -->
+
 	</div>
 
     <!-- //메이콘텐츠영역 -->
@@ -187,6 +288,47 @@ $(document).ready(function() {
 	<p class="to_top"><a href="#wrap" class="s_point">TOP</a></p>
 </div>
 <!-- //하단퀵메뉴영역 -->
+<!-- 모달창(초기엔 숨긴상태 -> 수정버튼을 클릭시 나오는 창) -->
+<div class="modal fade" id="modal-reply">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+		<div class="modal-header">
+		  <h4 class="modal-title">작성자명</h4>
+		  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		</div>
+		<div class="modal-body">
+		  <input class="form-control" type="text" name="modal_reply_text" id="modal_reply_text" value="댓글내용 출력"></input>
+		</div>
+		<div class="modal-footer">
+			<button type="button" class="btn btn-primary">수정</button>
+			<button type="button" class="btn btn-danger">삭제</button>
+		 	<button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
 
+		</div>
+	  </div>
+	  <!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+  <!-- /.modal -->
+  <script>
+	  $(document).ready(function(){
+		  $('#btn_reply_write').click(function(){
+			$.ajax({
+				method: 'get',
+				url: './board_view.html', // RestaAPI URL 입력
+				dataType: 'text',
+				success:function(result){
+					alert('RestAPI성공');
+				},
+				error:function(){
+					alert('RestAPI서버가 작동하지 않습니다.');
+				}
+			});
+		  });
+	    });
+  </script>
 </body>
 </html>
