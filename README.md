@@ -6,11 +6,16 @@
     - 자바에 익숙해진 후 위 스프링프로젝트를 이용해서 VS code에서 만든 UI를 JSP로 변경 한 후 스프링웹프로젝트를 진행
     - 관리자단 AdminLTE적용-스프링시간: 바로jsp(회원관리 CRUD, 게시판생성관리CRUD)
 
+#### 20210528(금) 작업예정
+    - 관리자단 admin/board_write.html, board_view.html(댓글Ajax처리)
+    - 대시보드 home.html(최근 회원가입정보, 최근 게시물정보)
+    - 이클립스로 작업한 html 내용을 -> resources 폴더(admin, home, root파일)로 배치
+    - 스프링 작업에 시작.
 
 #### 20210527(목) 작업
     - 관리자단 AdmonLTE적용-UI시간: (게시판CRUD, 대시보드)
     - 관리자단 기본 틀(템블릿): 공통 UI부분 작업 OK.
-    - admin/board_list.html 부터 시작.
+    - admin/board_list.html 작업
     - Ctrl + k, Ctrl + 0 - 코드 축소 - Ctrl + k + 0 (코드구조 확인)
     - Ctrl + k, Ctrl + j - 코드 펼침 - Ctrl + k + j
 
